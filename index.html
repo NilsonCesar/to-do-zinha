@@ -13,4 +13,43 @@
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     </head>
 
+    <body>
+        <header>
+            <h1>to-do-zinha!</h1>
+        </header>
+
+        <main>
+            <section class="task-creator">
+                <form>
+                    <h2>Adicione uma nova Tarefa</h2>
+
+                    <section class="name-task">
+                        <label for="name">Nome da tarefa:</label>
+                        <input type="text" name="name" id="name" required>
+                    </section>
+
+                    <section class="section-task">
+                        <label for="section">Seção da tarefa:</label>
+                        <input type="text" name="section" id="section" required>
+                    </section>
+
+                    <section class="description-task">
+                        <label for="description">Breve descrição (opcional):</label>
+                        <textarea name="description" id="description" rows="1" cols="20"></textarea>
+                    </section>
+
+                    <section class="submission">
+                        <input type="submit" value="Criar tarefa">
+                    </section>
+                </form>
+            </section>
+
+            <section class="sections-tasks">
+                <h2>Seções!</h2>
+            </section>
+        </main>
+
+        <footer></footer>
+    </body>
+
 </html>
