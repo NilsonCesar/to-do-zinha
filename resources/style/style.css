@@ -1,0 +1,17 @@
+body {
+    background-color: #F2C438;
+    font-family: 'Pacifico', cursive;
+}
+
+.border-extreme {
+    display: block;
+    height: 10px;
+    width: 100%;
+    background-color: #593F0E;
+}
+
+.title{
+    margin: 1.5% 0;
+    text-align: center;
+    font-size: 48px;
+}
