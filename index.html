@@ -23,32 +23,38 @@
 
         <main>
             <section class="task-creator">
-                <form>
-                    <h2>Adicione uma nova Tarefa</h2>
+                <div>
+                    <form>
+                        <h2>Adicione uma nova Tarefa</h2>
 
-                    <section class="name-task">
-                        <label for="name">Nome da tarefa:</label>
-                        <input type="text" name="name" id="name" required>
-                    </section>
+                        <section class="name-task">
+                            <label for="name">Nome da tarefa:</label>
+                            <input type="text" name="name" id="name" required>
+                        </section>
 
-                    <section class="section-task">
-                        <label for="section">Seção da tarefa:</label>
-                        <input type="text" name="section" id="section" required>
-                    </section>
+                        <section class="section-task">
+                            <label for="section">Seção da tarefa:</label>
+                            <input type="text" name="section" id="section" required>
+                        </section>
 
-                    <section class="description-task">
-                        <label for="description">Breve descrição (opcional):</label>
-                        <textarea name="description" id="description" rows="1" cols="20"></textarea>
-                    </section>
+                        <section class="description-task">
+                            <label for="description">Breve descrição (opcional):</label>
+                            <textarea name="description" id="description" rows="10" cols="20" maxlength="150"></textarea>
+                        </section>
 
-                    <section class="submission">
-                        <input type="submit" value="Criar tarefa">
-                    </section>
-                </form>
+                        <section class="submission">
+                            <input type="submit" value="Criar tarefa">
+                        </section>
+                    </form>
+                </div>
             </section>
 
-            <section class="sections-tasks">
+            <section class="section-tasks">
                 <h2 class="title">Seções!</h2>
+
+                <section class="tasks">
+
+                </section>
             </section>
         </main>
 
