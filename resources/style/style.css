@@ -101,7 +101,9 @@ input, textarea {
 
 .task {
     margin: 5% 0;
-    width: 40%;
+    width: 30%;
+    padding: 3%;
+    border-radius: 19px;
     background-color: #593F0E;
     color: #fff;
 }
