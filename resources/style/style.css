@@ -73,12 +73,18 @@ input, textarea {
     text-align: center;
 }
 
-.submission input {
+#submission-button {
     height: 40px;
     color: #fff;
     background-color: #593F0E;
     font-family: 'Pacifico', cursive;
     font-size: 20px;
+    cursor: pointer;
+    transition: 1s background-color;
+}
+
+#submission-button:hover {
+    background-color: #000;
 }
 
 .section-tasks {
