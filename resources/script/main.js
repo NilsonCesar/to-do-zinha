@@ -1,28 +1,50 @@
-const button = document.getElementById("submission-button");
-
-// let sectionTest = document.createElement("section");
-// sectionTest.classList.add("task");
-
-// let sectionName = document.createElement("h3");
-// sectionName.innerHTML = "Terminar a to-do";
-
-// sectionTest.appendChild(sectionName);
-// document.getElementById("tasks").appendChild(sectionTest);
+const form = document.getElementById("taskForm");
 
 // In soon, create a createTask.js module to this code:
-const createTask = (nameTask, sectionTask, descriptionTask) => {
+const createTask = (nameTask, descriptionTask) => {
+    let name = nameTask.replace(/\s+/g, '');
+
+    let sectionTask = document.createElement("section");
+    sectionTask.classList.add("task");
+    
+    let checkTask = document.createElement("input");
+    checkTask.setAttribute("type", "checkbox");
+    checkTask.setAttribute("name", name);
+    checkTask.setAttribute("id", name);
+    checkTask.setAttribute("value", name);
+    
+    let taskName = document.createElement("label");
+    taskName.innerHTML = nameTask;
+    taskName.setAttribute("for", name);
+
+    sectionTask.appendChild(checkTask);
+    sectionTask.appendChild(taskName);
+
+    let descriptionText = document.createElement("p");
+    descriptionText.innerHTML = descriptionTask;
+    taskName.appendChild(descriptionText);
+    
+    document.getElementById("tasks").appendChild(sectionTask);
+}
+
+const clearForm = () => {
+    document.getElementById("name").value = "";
+    document.getElementById("description").value = "";
 }
 
 const validateForm = () => {
     const name = document.getElementById("name").value.trim();
-    const section = document.getElementById("section").value.trim();
     const description = document.getElementById("description").value.trim();
     
-    const isRequiredInputsBlank = !name || !section;
+    const isRequiredInputsBlank = !name;
 
     if(!isRequiredInputsBlank) {
-        createTask(name, section, description);
+        createTask(name, description);
     }
 };
 
-button.addEventListener("click", validateForm);
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    validateForm();
+    clearForm();
+});

@@ -74,11 +74,12 @@ input, textarea {
 }
 
 #submission-button {
-    height: 40px;
+    height: 70px;
+    width: 50%;
     color: #fff;
     background-color: #593F0E;
     font-family: 'Pacifico', cursive;
-    font-size: 20px;
+    font-size: 30px;
     cursor: pointer;
     transition: 1s background-color;
 }
@@ -92,23 +93,40 @@ input, textarea {
     margin: 0 auto;
 }
 
-.tasks {
+#tasks {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
 .task {
-    margin: 5% 0;
-    width: 30%;
+    display: inline-block;
+    margin: 2% 5%;
+    width: 40%;
     padding: 3%;
+    box-sizing: border-box;
     border-radius: 19px;
     background-color: #593F0E;
     color: #fff;
 }
 
-.task h3 {
+.task input {
+    height: auto;
+    align-items: center;
+}
+
+.task label {
+    margin-left: 2%;
     font-size: 35px;
     text-align: center;
+}
+
+.task p {
+    font-family: 'Work Sans', sans-serif;
+    text-align: justify;
+    margin-top: 20px;
+    font-size: 24px;
 }
