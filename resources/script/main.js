@@ -1,4 +1,5 @@
 const form = document.getElementById("taskForm");
+const tasks = document.getElementById("tasks");
 
 // In soon, create a createTask.js module to this code:
 const createTask = (nameTask, descriptionTask) => {
@@ -6,6 +7,7 @@ const createTask = (nameTask, descriptionTask) => {
 
     let sectionTask = document.createElement("section");
     sectionTask.classList.add("task");
+    sectionTask.setAttribute("id", name + "-task");
     
     let checkTask = document.createElement("input");
     checkTask.setAttribute("type", "checkbox");
@@ -48,3 +50,12 @@ form.addEventListener("submit", (e) => {
     validateForm();
     clearForm();
 });
+
+tasks.addEventListener("click", (e) => {
+    let type = e.target.type;
+    if(type === 'checkbox') {
+        let name = e.target.name;
+        let task = document.getElementById(name + '-task');
+        tasks.removeChild(task);
+    }
+})
